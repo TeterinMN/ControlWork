@@ -8,7 +8,7 @@ string[] newArray = new string[inputArray.Length];
 for (int i = 0; i < inputArray.Length; i++)
 {
     if (inputArray
-[i].Length <= 3)
+[i].Length <= 4)
     {
         newArray[count] = inputArray
     [i];
@@ -21,7 +21,5 @@ Array.Resize(ref newArray, count);
 Console.WriteLine("Результат:");
 foreach (string s in newArray)
 {
-    Console.WriteLine(s);
+    Console.Write(s);
 }
-
-Console.ReadLine();
