@@ -7,11 +7,9 @@ string[] newArray = new string[inputArray.Length];
 
 for (int i = 0; i < inputArray.Length; i++)
 {
-    if (inputArray
-[i].Length <= 4)
+    if (inputArray[i].Length <= 4)
     {
-        newArray[count] = inputArray
-    [i];
+        newArray[count] = inputArray[i];
         count++;
     }
 }
