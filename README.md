@@ -9,7 +9,6 @@
         Console.WriteLine("Введите исходный массив строк, разделяя элементы запятыми:");
         string[] input = Console.ReadLine().Split(',');
 
-
 ##### Создаем новый массив строк
         int count = 0;
         string[] output = new string[input.Length];
@@ -22,10 +21,8 @@
             }
         }
 
-
 ##### Уменьшаем размер массива до количества найденных элементов с длиной строки 3 или меньше символов
         Array.Resize(ref output, count);
-
 
 ##### Выводим результат в консоль
         Console.WriteLine("Результат:");
