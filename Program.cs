@@ -18,6 +18,7 @@ for (int i = 0; i < inputArray.Length; i++)
 Array.Resize(ref newArray, count);
 
 Console.Write("Результат: ");
-for (int i = 0; i < count; i++) {
+for (int i = 0; i < count; i++)
+{
     Console.Write(newArray[i] + " ");
 }
