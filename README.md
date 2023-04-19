@@ -6,17 +6,19 @@
 #
 
 ##### Вводим с клавиатуры массив строк
-        Console.WriteLine("Введите исходный массив строк, разделяя элементы запятыми:");
-        string[] input = Console.ReadLine().Split(',');
+        Console.WriteLine("Введите исходный массив строк, разделяя элементы запятой:");
+        string[] inputArray = Console.ReadLine()!.Split(',');
 
 ##### Создаем новый массив строк
         int count = 0;
-        string[] output = new string[input.Length];
-        for (int i = 0; i < input.Length; i++)
+        string[] newArray = new string[inputArray.Length];
+
+        for (int i = 0; i < inputArray.Length; i++)
         {
-            if (input[i].Length <= 4)
+            string trimmed = inputArray[i].Trim();
+            if (trimmed.Length <= 3)
             {
-                output[count] = input[i];
+                newArray[count] = trimmed;
                 count++;
             }
         }
@@ -25,10 +27,10 @@
         Array.Resize(ref output, count);
 
 ##### Выводим результат в консоль
-        Console.WriteLine("Результат:");
-            foreach (string s in output)
-            {
-                Console.WriteLine(s);
-            }
+        Console.Write("Результат: ");
+        for (int i = 0; i < count; i++)
+        {
+            Console.Write(newArray[i] + " ");
+        }
 
 #
