@@ -1,5 +1,5 @@
 ﻿Console.Clear();
-Console.WriteLine("Введите исходный массив строк, разделяя элементы запятыми:");
+Console.WriteLine("Введите исходный массив строк, разделяя элементы запятой:");
 string[] inputArray = Console.ReadLine()!.Split(',');
 
 int count = 0;
@@ -7,17 +7,17 @@ string[] newArray = new string[inputArray.Length];
 
 for (int i = 0; i < inputArray.Length; i++)
 {
-    if (inputArray[i].Length <= 4)
+    string trimmed = inputArray[i].Trim();
+    if (trimmed.Length <= 3)
     {
-        newArray[count] = inputArray[i];
+        newArray[count] = trimmed;
         count++;
     }
 }
 
 Array.Resize(ref newArray, count);
 
-Console.WriteLine("Результат:");
-foreach (string s in newArray)
-{
-    Console.Write(s);
+Console.Write("Результат: ");
+for (int i = 0; i < count; i++) {
+    Console.Write(newArray[i] + " ");
 }
